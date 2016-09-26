@@ -1,0 +1,31 @@
+{
+  "name": "spi-stl",
+  "version": "1.0.0",
+  "description": "Special Private Investigation - St. Louis",
+  "main": "dist/index.html",
+  "scripts": {
+    "serve": "gulp serve"
+  },
+  "author": "cvharris",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "latest",
+    "browser-sync": "latest",
+    "del": "latest",
+    "gulp": "latest",
+    "gulp-clean-css": "latest",
+    "gulp-concat": "latest",
+    "gulp-data": "latest",
+    "gulp-fontmin": "^0.7.4",
+    "gulp-imagemin": "latest",
+    "gulp-less": "latest",
+    "gulp-nunjucks-render": "latest",
+    "gulp-postcss": "6.1.1",
+    "gulp-rename": "latest",
+    "gulp-sourcemaps": "latest",
+    "gulp-uglify": "latest",
+    "imagemin-pngquant": "latest",
+    "lodash": "latest",
+    "postcss-normalize": "latest"
+  }
+}

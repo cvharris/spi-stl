@@ -1,0 +1,71 @@
+/**
+ * Basic styling
+ */
+body {
+  font-family: @base-font-family;
+  font-size: @base-font-size;
+  line-height: @base-line-height;
+  font-weight: 300;
+  color: @black;
+  background-color: @background-swatch;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+p, blockquote, pre,
+ul, ol, dl, figure {
+  margin-bottom: @spacing-unit / 2;
+}
+
+/**
+ * Lists
+ */
+ul, ol {
+  margin-left: @spacing-unit;
+}
+
+li {
+  > ul,
+  > ol {
+     margin-bottom: 0;
+  }
+}
+
+/**
+ * Links
+ */
+a {
+  color: @focus-color;
+  text-decoration: none;
+
+  &:hover {
+    color: @blue-alt-darker;
+    text-decoration: none;
+  }
+}
+
+/**
+ * Blockquotes
+ */
+blockquote {
+  color: @grey-color;
+  border-left: 4px solid @grey-light;
+  padding-left: @spacing-unit / 2;
+  font-size: 18px;
+  letter-spacing: -1px;
+  font-style: italic;
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+/**
+ * Fix fuzzy text on iOS
+ */
+h1, h2, h3, h4, h5, h6, p, a:not(.photo), li, blockquote {
+  -webkit-transform: translate3d(0,0,0);
+}

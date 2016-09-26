@@ -1,0 +1,26 @@
+<!-- index.njk -->
+{% extends "layout.njk" %}
+
+{% block site %}
+<div id="site">
+  <header class="title-bar">
+    <div class="title-actions-container container">
+      <div class="logo-box left">
+        <div class="title">
+          {# <img id="logo" class="logo" src="/img/Vatterott_Icon.png" /> #}
+          <span class="website-title name">{{ meta.title }}</span>
+        </div>
+      </div>
+      <div id="menu-reveal" class="menu-button-container right">
+        <i class="fa fa-bars"></i>
+      </div>
+    </div>
+  </header>
+  {% include "partials/nav.njk" %}
+  <main id="content-main">
+    {% include "partials/top.njk" %}
+    {% include "partials/about.njk" %}
+    {% include "partials/footer.njk" %}
+  </main>
+</div>
+{% endblock %}
