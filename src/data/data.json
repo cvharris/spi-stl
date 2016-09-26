@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Tyler and Jennifer Lawrence Wedding"
+    "title": "Stealth Private Investigations - Private Detective"
   },
   "sections": [
     {
@@ -10,40 +10,34 @@
       "active": true
     },
     {
-      "id": "stories",
-      "label": "About Us",
-      "menuIcon": "fa-book",
+      "id": "about",
+      "label": "About",
+      "menuIcon": "fa-user-secret",
       "active": true
     },
     {
-      "id": "party",
-      "label": "The Wedding Party",
-      "menuIcon": "fa-group",
+      "id": "testimonials",
+      "label": "testimonials",
+      "menuIcon": "fa-commenting-o",
       "active": true
     },
     {
-      "id": "schedule",
-      "label": "Schedule",
-      "menuIcon": "fa-calendar",
+      "id": "contact",
+      "label": "Contact",
+      "menuIcon": "fa-tty",
       "active": true
     },
     {
-      "id": "todos",
-      "label": "Fun Things to Do in Little Rock",
-      "menuIcon": "fa-child",
+      "id": "faq",
+      "label": "FAQs",
+      "menuIcon": "fa-info",
       "active": true
     },
     {
-      "id": "registry",
-      "label": "Registry",
-      "menuIcon": "fa-gift",
-      "active": true
-    },
-    {
-      "id": "photos",
-      "label": "Registry",
-      "menuIcon": "fa-camera",
-      "active": true
+      "id": "blog",
+      "label": "Blog",
+      "menuIcon": "fa-edit",
+      "active": false
     }
   ]
 }
