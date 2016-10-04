@@ -7,8 +7,8 @@
     <div class="title-actions-container container">
       <div class="logo-box left">
         <div class="title">
-          {# <img id="logo" class="logo" src="/img/Vatterott_Icon.png" /> #}
-          <span class="website-title name">{{ meta.title }}</span>
+          <img id="logo" class="website-logo" src="/img/logo.png" />
+          <span class="website-title">{{ meta.title | replace("-", "<br/>") | safe }}</span>
         </div>
       </div>
       <div id="menu-reveal" class="menu-button-container right">
@@ -19,7 +19,14 @@
   {% include "partials/nav.njk" %}
   <main id="content-main">
     {% include "partials/top.njk" %}
-    {% include "partials/about.njk" %}
+    {% for section in sections %}
+      {% if section.active and section.content %}
+      <section id="{{ section.id }}" class="container">
+        <h1 class="section-heading"><i class="fa {{ section.menuIcon }}"></i>{{section.label}}</h1>
+        {% include "partials/" + section.id + ".njk" ignore missing %}
+      </section>
+      {% endif %}
+    {% endfor %}
     {% include "partials/footer.njk" %}
   </main>
 </div>

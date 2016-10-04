@@ -6,7 +6,7 @@
 
   &:after {
     content: '';
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     width: ~"calc(100vw - 300px)";
@@ -20,12 +20,6 @@
     transition-property: opacity, transform;
     transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
   }
-
-  // @media (max-width: @mobile) {
-  //   overflow-x: hidden;
-  //   overflow-y: scroll;
-  //   -webkit-overflow-scrolling: touch;
-  // };
 }
 
 .title-bar {
@@ -34,12 +28,15 @@
   height: @header-height;
   background: @background-swatch;
   position: fixed;
+  border-bottom: .25rem solid @blue-primary;
+  box-shadow: 0 .25rem 1rem 0 @grey-dark;
   top: 0;
   left: 0;
   z-index: 11;
   overflow: hidden;
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
+  transition: transform 0.5s cubic-bezier(0.165, 0.840, 0.440, 1.000);
 }
 
 .title-actions-container {
@@ -68,6 +65,10 @@
   max-height: 100%;
 }
 
+.website-title {
+  padding-left: .25rem;
+}
+
 .menu-button-container {
   padding: 1rem 1.25rem;
   cursor: pointer;
@@ -86,7 +87,7 @@
 body {
   &.menuOpen {
     #site {
-      overflow: hidden;
+      // overflow: hidden;
 
       &:after {
         opacity: 1;
@@ -102,25 +103,19 @@ body {
     }
 
     #content-main {
-      -webkit-transform: translate3d(-300px, 0, 0);
       transform: translate3d(-300px, 0, 0);
     }
 
     #main-menu {
       visibility: visible;
-      -webkit-transition: -webkit-transform 0.5s;
       transition: transform 0.5s;
-      -webkit-transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
-       -moz-transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
-         -o-transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
-            transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
-      -webkit-transform: translate3d(0, 0, 0);
+      transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
       transform: translate3d(0, 0, 0);
     }
   }
   &.no-header {
     .title-bar {
-      transform: translate3d(0, -100%, 0);
+      transform: translate3d(0, -110%, 0);
     }
   }
 }

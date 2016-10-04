@@ -15,8 +15,8 @@ body {
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
-p, blockquote, pre,
-ul, ol, dl, figure {
+p, pre,
+ul, ol, dl {
   margin-bottom: @spacing-unit / 2;
 }
 
@@ -47,25 +47,97 @@ a {
   }
 }
 
+b, strong {
+  font-weight: 700;
+}
+
 /**
  * Blockquotes
  */
 blockquote {
-  color: @grey-color;
-  border-left: 4px solid @grey-light;
-  padding-left: @spacing-unit / 2;
-  font-size: 18px;
-  letter-spacing: -1px;
   font-style: italic;
+  margin: 0 0 2rem 0;
+  position: relative;
 
-  > :last-child {
-    margin-bottom: 0;
+  &:before {
+    content: open-quote;
+    display: inline;
   }
+
+  &:after {
+    content: close-quote;
+    display: inline;
+  }
+}
+
+figure {
+  margin: 0 0 2rem;
+  text-align: center;
+
+  footer {
+    cite {
+      display: block;
+      font-style: normal;
+
+      &.author {
+        font-weight: 400;
+      }
+
+      &.citation-title {
+        font-size: .8rem;
+      }
+    }
+  }
+}
+
+/**
+ * Definition Lists
+ */
+dd {
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+}
+
+dt {
+  font-weight: 600;
 }
 
 /**
  * Fix fuzzy text on iOS
  */
-h1, h2, h3, h4, h5, h6, p, a:not(.photo), li, blockquote {
+p, a:not(.photo), li, blockquote {
   -webkit-transform: translate3d(0,0,0);
+}
+
+/**
+ * Headers
+ */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 2rem;
+  margin: 0 0 1em 0;
+}
+
+h1 {
+  font-size: 2rem;
+
+  @media (min-width: @tablet) {
+    font-size: 3rem;
+  }
+}
+
+h2 {
+  font-size: 1.5rem;
+
+  @media (min-width: @tablet) {
+    font-size: 2.25rem;
+  }
+}
+
+h3 {
+  font-size: 1.25rem;
+
+  @media (min-width: @tablet) {
+    font-size: 1.75rem;
+  }
 }

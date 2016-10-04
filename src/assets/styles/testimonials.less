@@ -1,0 +1,17 @@
+#testimonials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  .section-heading {
+    flex: 0 0 100%;
+  }
+
+  figure {
+    flex: 0 0 100%;
+
+    @media (min-width: @tablet) {
+      flex: 0 0 45%;
+    }
+  }
+}
