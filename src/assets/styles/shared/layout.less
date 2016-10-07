@@ -16,11 +16,20 @@ body {
   };
 }
 
+section {
+  padding-top: 4rem !important;
+}
+
 .section-heading {
   text-align: center;
 
   i {
     display: block;
+    line-height: 2rem;
+
+    @media (min-width: @tablet) {
+      line-height: 4rem;
+    }
   }
 
   @media (min-width: @tablet) {

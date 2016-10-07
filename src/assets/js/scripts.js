@@ -24,7 +24,8 @@
         } else if (direction == 'up') {
           body.addClass('no-header');
         }
-      }
+      },
+      offset: 32
     });
 
     $('#menu-reveal').click(function() {

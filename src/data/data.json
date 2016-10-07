@@ -34,7 +34,7 @@
     {
       "id": "faq",
       "label": "FAQs",
-      "menuIcon": "fa-info",
+      "menuIcon": "fa-info-circle",
       "content": true,
       "active": true
     },

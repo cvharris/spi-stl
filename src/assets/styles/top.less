@@ -43,6 +43,10 @@
   @media (min-width: @tablet) {
     background: none;
     color: currentColor;
+
+    &:before {
+      content: none;
+    }
   }
 }
 
@@ -61,27 +65,4 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.action-button {
-  display: block;
-  font-family: @base-font-family;
-  background-color: @blue-primary;
-  color: @white;
-  font-size: .9rem;
-  line-height: 3.5rem;
-  font-weight: 300;
-  width: 100%;
-  padding: 0;
-  border-radius: .25rem;
-  transition: background-color 0.5s @timing-function;
-  margin: 0;
-  cursor: pointer;
-  border: none;
-  outline: none;
-  -webkit-appearance: none;
-
-  &:hover {
-    background-color: darken(@blue-primary, 10%);
-  }
 }

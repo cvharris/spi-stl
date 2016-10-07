@@ -49,6 +49,39 @@
   padding: 0;
 }
 
+.action-button {
+  display: block;
+  text-align: center;
+  font-family: @base-font-family;
+  background-color: @blue-primary;
+  color: @white;
+  font-size: .9rem;
+  line-height: 1rem;
+  font-weight: 300;
+  width: 100%;
+  padding: 1.25rem 3.5rem;
+  border-radius: .25rem;
+  transition: background-color 0.5s @timing-function;
+  margin: 0 auto 2rem auto;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+
+  &:hover {
+    background-color: darken(@blue-primary, 10%);
+    color: @white;
+  }
+
+  &:active {
+    color: @white;
+  }
+
+  @media (min-width: @tablet) {
+    max-width: 22rem;
+  }
+}
+
 .logo-box {
   height: 100%;
 }
