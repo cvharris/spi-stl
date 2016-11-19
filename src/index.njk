@@ -23,6 +23,22 @@
   {% include "nav.njk" %}
   <main id="content-main">
     {% include "top.njk" %}
+    <section id="latest-blog-posts" class="container">
+      <h3 class="section-heading"><i class="fa fa-edit"></i>Latest Blog Posts</h3>
+      {% for post in site.data.blog | sort(site.data.blog, true, false, 'id') %}
+        {% if loop.index < 4 %}
+          <div class="latest-post">
+            <h4 class="latest-post-title">
+              <a href="/private-investigators-blog#{{ post.id }}">
+                {{ post.title }} - <time  class="post-published-date" datetime="{{ post.published }}">{{ post.published }}</time>
+              </a>
+            </h4>
+          </div>
+        {% endif %}
+      {% endfor %}
+      <div class="ellipsis">...</div>
+      <a class="action-button" href="/private-investigators-blog">Read more blog posts</a>
+    </section>
     {% for section in site.data.sections %}
       {% if section.active and section.content %}
       <section id="{{ section.id }}" class="container">

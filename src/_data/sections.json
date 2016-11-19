@@ -1,7 +1,7 @@
 [
   {
     "id": "top",
-    "link": "#top",
+    "link": "/#top",
     "label": "Home",
     "menuIcon": "fa-home",
     "content": false,
@@ -9,7 +9,7 @@
   },
   {
     "id": "blog",
-    "link": "private-investigators-blog",
+    "link": "/private-investigators-blog",
     "label": "Blog",
     "menuIcon": "fa-edit",
     "content": false,
@@ -17,7 +17,7 @@
   },
   {
     "id": "about",
-    "link": "#about",
+    "link": "/#about",
     "label": "About",
     "menuIcon": "fa-user-secret",
     "content": true,
@@ -25,25 +25,25 @@
   },
   {
     "id": "testimonials",
-    "link": "#testimonials",
+    "link": "/#testimonials",
     "label": "Testimonials",
     "menuIcon": "fa-commenting-o",
     "content": true,
     "active": true
   },
   {
-    "id": "contact",
-    "link": "#contact",
-    "label": "Contact",
-    "menuIcon": "fa-tty",
+    "id": "faq",
+    "link": "/#faq",
+    "label": "FAQs",
+    "menuIcon": "fa-eye",
     "content": true,
     "active": true
   },
   {
-    "id": "faq",
-    "link": "#faq",
-    "label": "FAQs",
-    "menuIcon": "fa-eye",
+    "id": "contact",
+    "link": "/#contact",
+    "label": "Contact",
+    "menuIcon": "fa-tty",
     "content": true,
     "active": true
   }

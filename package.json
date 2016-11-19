@@ -50,7 +50,7 @@
     "gulp-uglify": "~1.5.1",
     "gulp-util": "~3.0.7",
     "imagemin-svgo": "~4.2.0",
-    "imagemin-pngquant": "latest",
+    "imagemin-pngquant": "^4.x.x",
     "js-yaml": "~3.5.2",
     "lodash": "4.16.4",
     "minimist": "~1.2.0",

@@ -9,7 +9,7 @@
 <div id="blog" class="container">
   <div class="blogreel">
     {% for post in site.data.blog | sort(site.data.blog, true, false, 'id') %}
-    <div class="post">
+    <div id="{{ post.id }}" class="post">
       <h2 class="post-title">{{ post.title }}</h2>
       <time class="post-published-date" datetime="{{ post.published }}">{{ post.published }}</time>
       <div class="post-body">
