@@ -9,7 +9,7 @@
   },
   {
     "id": "blog",
-    "link": "blog",
+    "link": "private-investigators-blog",
     "label": "Blog",
     "menuIcon": "fa-edit",
     "content": false,

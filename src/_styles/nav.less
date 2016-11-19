@@ -19,9 +19,13 @@ nav#main-menu {
 .home-link {
   display: flex;
   height: 100%;
-  flex: 0 0 700px;
+  flex: 1 0 auto;
   color: black;
   align-items: center;
+
+  @media (min-width: @tablet) {
+    flex: 0 0 500px;
+  }
 }
 
 .section-link {

@@ -26,7 +26,7 @@
     {% for section in site.data.sections %}
       {% if section.active and section.content %}
       <section id="{{ section.id }}" class="container">
-        <h1 class="section-heading"><i class="fa {{ section.menuIcon }}"></i>{{section.label}}</h1>
+        <h3 class="section-heading"><i class="fa {{ section.menuIcon }}"></i>{{section.label}}</h3>
         {% include section.id + ".njk" ignore missing %}
       </section>
       {% endif %}
