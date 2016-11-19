@@ -1,6 +1,12 @@
+// Main javascript entry point
+// Should handle bootstrapping/starting application
+
 'use strict';
 
-(function($){
+import $ from 'jquery';
+import 'waypoints';
+
+$(() => {
   $(document).ready(function() {
     var doc = this;
     doc.sidebarVisible = false;
@@ -56,4 +62,4 @@
       body.addClass('no-header');
     }
   })
-})(jQuery);
+});

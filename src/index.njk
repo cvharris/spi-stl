@@ -1,5 +1,5 @@
 <!-- index.njk -->
-{% extends "layout.njk" %}
+{% extends "_layouts/layout.njk" %}
 
 {% block site %}
 <div id="site">
@@ -7,7 +7,7 @@
     <div class="title-actions-container container">
       <div class="logo-box left">
         <div class="title">
-          <img id="logo" class="website-logo" src="/img/logo.png" />
+          <img id="logo" class="website-logo" src="/images/logo.png" />
           <span class="website-title">SPI{# {{ meta.title | replace("-", "<br/>") | safe }} #}</span>
           <span class="header-phone"><a href="tel:+1314329-7151">314-329-7151</a></span>
         </div>
@@ -17,18 +17,18 @@
       </div>
     </div>
   </header>
-  {% include "partials/nav.njk" %}
+  {% include "nav.njk" %}
   <main id="content-main">
-    {% include "partials/top.njk" %}
-    {% for section in sections %}
+    {% include "top.njk" %}
+    {% for section in site.data.sections %}
       {% if section.active and section.content %}
       <section id="{{ section.id }}" class="container">
         <h1 class="section-heading"><i class="fa {{ section.menuIcon }}"></i>{{section.label}}</h1>
-        {% include "partials/" + section.id + ".njk" ignore missing %}
+        {% include section.id + ".njk" ignore missing %}
       </section>
       {% endif %}
     {% endfor %}
-    {% include "partials/footer.njk" %}
+    {% include "_layouts/footer.njk" %}
   </main>
 </div>
 {% endblock %}

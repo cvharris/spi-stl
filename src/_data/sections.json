@@ -1,0 +1,44 @@
+[
+  {
+    "id": "top",
+    "label": "Home",
+    "menuIcon": "fa-home",
+    "content": false,
+    "active": true
+  },
+  {
+    "id": "about",
+    "label": "About",
+    "menuIcon": "fa-user-secret",
+    "content": true,
+    "active": true
+  },
+  {
+    "id": "testimonials",
+    "label": "Testimonials",
+    "menuIcon": "fa-commenting-o",
+    "content": true,
+    "active": true
+  },
+  {
+    "id": "contact",
+    "label": "Contact",
+    "menuIcon": "fa-tty",
+    "content": true,
+    "active": true
+  },
+  {
+    "id": "faq",
+    "label": "FAQs",
+    "menuIcon": "fa-eye",
+    "content": true,
+    "active": true
+  },
+  {
+    "id": "blog",
+    "label": "Blog",
+    "menuIcon": "fa-edit",
+    "content": true,
+    "active": false
+  }
+]

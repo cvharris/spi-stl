@@ -1,7 +1,7 @@
 <!-- nav.njk -->
 <nav id="main-menu" class="right nav-menu">
   <div class="menu-section">
-    {% for section in sections %}
+    {% for section in site.data.sections %}
       {% if section.active %}
       <a href="#{{section.id}}" class="section-link">
         <i class="fa {{section.menuIcon}}"></i>
