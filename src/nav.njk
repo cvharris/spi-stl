@@ -3,7 +3,7 @@
   <div class="menu-section">
     {% for section in site.data.sections %}
       {% if section.active %}
-      <a href="#{{section.id}}" class="section-link">
+      <a href="{{section.link}}" class="section-link">
         <i class="fa {{section.menuIcon}}"></i>
         {{section.label}}
       </a>

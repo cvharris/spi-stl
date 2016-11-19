@@ -87,6 +87,29 @@
   }
 }
 
+.parallax {
+  overflow: hidden; // added for pseudo-element
+  position: relative; // added for pseudo-element
+  z-index: 1;
+
+  // Fixed-position background image
+  > .parallax-image {
+    position: fixed; // instead of background-attachment
+    width: 100%;
+    height: 100%;
+    min-height: 768px;
+    top: 0;
+    left: 0;
+    transform: translate3d(0, 0, 0);
+    background-repeat: no-repeat;
+    background-position: bottom 52px center;
+    background-size: cover;
+    will-change: transform; // creates a new paint layer
+    z-index: -1;
+    pointer-events: none; // we shouldn't interact with them anyway
+  }
+}
+
 .logo-box {
   height: 100%;
   flex: 1;
@@ -96,8 +119,23 @@
   height: 100%;
   padding: .25rem;
   padding-right: 0;
+  padding-left: .25rem;
   display: flex;
   align-items: center;
+
+  small {
+    font-style: italic;
+    padding-left: .25rem;
+  }
+
+  @media (min-width: @tablet) {
+
+    small {
+      font-size: 1.1rem;
+      font-weight: 100;
+      padding-left: .5rem;
+    }
+  }
 }
 
 #logo {
@@ -106,11 +144,14 @@
 }
 
 .website-title {
-  padding-left: .75rem;
-  flex: 1;
+  padding-left: .25rem;
   font-size: 2.5rem;
   font-weight: 400;
   line-height: 3.5rem;
+
+  @media (min-width: @tablet) {
+    padding-left: .5rem;
+  }
 }
 
 .menu-button-container {
@@ -155,11 +196,6 @@ body {
       transition: transform 0.5s;
       transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
       transform: translate3d(0, 0, 0);
-    }
-  }
-  &.no-header {
-    .title-bar {
-      transform: translate3d(0, -110%, 0);
     }
   }
 }

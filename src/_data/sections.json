@@ -1,13 +1,23 @@
 [
   {
     "id": "top",
+    "link": "#top",
     "label": "Home",
     "menuIcon": "fa-home",
     "content": false,
     "active": true
   },
   {
+    "id": "blog",
+    "link": "blog",
+    "label": "Blog",
+    "menuIcon": "fa-edit",
+    "content": false,
+    "active": true
+  },
+  {
     "id": "about",
+    "link": "#about",
     "label": "About",
     "menuIcon": "fa-user-secret",
     "content": true,
@@ -15,6 +25,7 @@
   },
   {
     "id": "testimonials",
+    "link": "#testimonials",
     "label": "Testimonials",
     "menuIcon": "fa-commenting-o",
     "content": true,
@@ -22,6 +33,7 @@
   },
   {
     "id": "contact",
+    "link": "#contact",
     "label": "Contact",
     "menuIcon": "fa-tty",
     "content": true,
@@ -29,16 +41,10 @@
   },
   {
     "id": "faq",
+    "link": "#faq",
     "label": "FAQs",
     "menuIcon": "fa-eye",
     "content": true,
     "active": true
-  },
-  {
-    "id": "blog",
-    "label": "Blog",
-    "menuIcon": "fa-edit",
-    "content": true,
-    "active": false
   }
 ]

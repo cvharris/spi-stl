@@ -1,5 +1,9 @@
-<!-- index.njk -->
-{% extends "_layouts/layout.njk" %}
+{% extends '_layouts/layout.njk' %}
+
+{% block config %}
+  {# Correct base url pathing for this page #}
+  {% set baseUrl = '../' %}
+{% endblock %}
 
 {% block site %}
 <div id="site">
@@ -22,15 +26,7 @@
   </header>
   {% include "nav.njk" %}
   <main id="content-main">
-    {% include "top.njk" %}
-    {% for section in site.data.sections %}
-      {% if section.active and section.content %}
-      <section id="{{ section.id }}" class="container">
-        <h1 class="section-heading"><i class="fa {{ section.menuIcon }}"></i>{{section.label}}</h1>
-        {% include section.id + ".njk" ignore missing %}
-      </section>
-      {% endif %}
-    {% endfor %}
+    {% include "blog/blog.njk" %}
     {% include "_layouts/footer.njk" %}
   </main>
 </div>

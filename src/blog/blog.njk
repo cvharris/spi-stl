@@ -1,0 +1,21 @@
+<!-- blog.njk -->
+<div class="page-header parallax">
+  <div class="page-header-background parallax-image" style="background-image: url(/images/stlatnight.jpg);">
+  </div>
+  <div class="page-header-box">
+    <h1 class="page-header-text">A Private Investigator's Blog</h1>
+  </div>
+</div>
+<div id="blog" class="container">
+  <div class="blogreel">
+    {% for post in site.data.blog | sort(site.data.blog, true, false, 'id') %}
+    <div class="post">
+      <h2 class="post-title">{{ post.title }}</h2>
+      <time class="post-published-date" datetime="{{ post.published }}">{{ post.published }}</time>
+      <div class="post-body">
+        {{ post.body }}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
